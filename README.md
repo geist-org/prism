@@ -1,2 +1,3 @@
-# prism
-Code styles for PrimsJS
+# Prism style
+
+[document site](https://prism.zeit-ui.co)
