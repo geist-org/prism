@@ -1,0 +1,129 @@
+import Layout from 'lib/layout'
+import { Link, Tabs, Snippet, Spacer } from '@zeit-ui/react'
+
+export const meta = {
+  title: 'home',
+}
+
+### About
+
+This is the code styles for `prism.js`, design style from <Link pure target="_blank" href="https://vercel.com/design">vercel.design</Link>.
+Report an issue on <Link pure target="_blank" color href="https://github.com/zeit-ui/react-prism">Github</Link>.
+
+<Spacer y={2} />
+
+#### Usage
+
+**1. Install:**
+
+<Tabs initialValue="Yarn" style={{ width: '450px' }}>
+  <Tabs.Item label="Yarn">
+    <Snippet text="yarn add @zeit-ui/react @zeit-ui/react-prism" />
+  </Tabs.Item>
+  <Tabs.Item label="NPM">
+    <Snippet text="npm install @zeit-ui/react @zeit-ui/react-prism" />
+  </Tabs.Item>
+</Tabs>
+
+This toolkit depends on `@zeit-ui/react`, learn more
+at <Link tarhet="_blank" pure color href="https://react.zeit-ui.co">document site</Link>.
+
+**2. Import to app.jsx:**
+
+```jsx
+import { ZEITUIProvider, CSSBaseline } from '@zeit-ui/react'
+import { PrismBaseline } from '@zeit-ui/react-prism'
+
+const app = () => (
+  <ZEITUIProvider>
+    <CSSBaseline />
+    <PrismBaseline />
+    <YourAppComponent />
+  </ZEITUIProvider>
+)
+```
+
+<Spacer y={2} />
+
+#### Preview
+
+Here is the display effect of different code blocks:
+
+
+**`.jsx`**
+```jsx
+import { Button } from '@zeit-ui/react'
+
+const MyExampleComponent = () => {
+  return (
+    <Button auto>Actions</Button>
+  )
+}
+
+export default MyExampleComponent
+```
+
+<Spacer y={2} />
+
+**`.tsx`**
+```tsx
+type Props = {
+  text: string
+}
+
+const Colors: React.FC<Props> = ({
+  text,
+}) => {
+  return (
+    <Button auto>{text}</Button>
+  )
+}
+```
+
+<Spacer y={2} />
+
+**`.html`**
+```html
+<html>
+ <body>
+  <div>main</div>
+ </body>
+</html>
+```
+
+<Spacer y={2} />
+
+**`.js`**
+```js
+/**
+ * The opposite of `before`. This method creates a function that invokes
+ * `func` once it's called `n` or more times.
+ *
+ * const saves = ['profile', 'settings']
+ * const done = after(saves.length, () => console.log('done saving!'))
+ *
+ * forEach(saves, type => asyncSave({ 'type': type, 'complete': done }))
+ * // => Logs 'done saving!' after the two async saves have completed.
+ */
+function after(n, func) {
+  if (typeof func !== 'function') {
+    throw new TypeError('Expected a function')
+  }
+  n = n || 0
+  return function(...args) {
+    if (--n < 1) {
+      return func.apply(this, args)
+    }
+  }
+}
+
+export default after
+```
+
+<Spacer y={3} />
+
+### License
+
+Licensed under the <Link pure target="_blank" href="https://github.com/zeit-ui/react-prism/blob/master/LICENSE">MIT LICENSE</Link>.
+
+export default ({ children }) => <Layout meta={meta}>{children}</Layout>
