@@ -7,8 +7,8 @@ export const meta = {
 
 ### About
 
-This is the code styles for `prism.js`, design style from <Link pure target="_blank" href="https://vercel.com/design">vercel.design</Link>.
-Report an issue on <Link pure target="_blank" color href="https://github.com/zeit-ui/react-prism">Github</Link>.
+This is the code styles for `prism.js`, design style from <Link target="_blank" href="https://vercel.com/design">vercel.design</Link>.
+Report an issue on <Link target="_blank" color href="https://github.com/zeit-ui/react-prism">Github</Link>.
 
 <Spacer y={2} />
 
@@ -26,7 +26,7 @@ Report an issue on <Link pure target="_blank" color href="https://github.com/zei
 </Tabs>
 
 This toolkit depends on `@zeit-ui/react`, learn more
-at <Link target="_blank" pure color href="https://react.zeit-ui.co">document site</Link>.
+at <Link target="_blank" color href="https://react.zeit-ui.co">document site</Link>.
 
 **2. Import to app.jsx:**
 
@@ -49,15 +49,13 @@ const app = () => (
 
 Here is the display effect of different code blocks:
 
-
 **`.jsx`**
+
 ```jsx
 import { Button } from '@zeit-ui/react'
 
 const MyExampleComponent = () => {
-  return (
-    <Button auto>Actions</Button>
-  )
+  return <Button auto>Actions</Button>
 }
 
 export default MyExampleComponent
@@ -66,34 +64,33 @@ export default MyExampleComponent
 <Spacer y={2} />
 
 **`.tsx`**
+
 ```tsx
 type Props = {
   text: string
 }
 
-const Colors: React.FC<Props> = ({
-  text,
-}) => {
-  return (
-    <Button auto>{text}</Button>
-  )
+const Colors: React.FC<Props> = ({ text }) => {
+  return <Button auto>{text}</Button>
 }
 ```
 
 <Spacer y={2} />
 
 **`.html`**
+
 ```html
 <html>
- <body>
-  <div>main</div>
- </body>
+  <body>
+    <div>main</div>
+  </body>
 </html>
 ```
 
 <Spacer y={2} />
 
 **`.js`**
+
 ```js
 /**
  * The opposite of `before`. This method creates a function that invokes
@@ -110,7 +107,7 @@ function after(n, func) {
     throw new TypeError('Expected a function')
   }
   n = n || 0
-  return function(...args) {
+  return function (...args) {
     if (--n < 1) {
       return func.apply(this, args)
     }
@@ -124,6 +121,6 @@ export default after
 
 ### License
 
-Licensed under the <Link pure target="_blank" href="https://github.com/zeit-ui/react-prism/blob/master/LICENSE">MIT LICENSE</Link>.
+Licensed under the <Link target="_blank" href="https://github.com/zeit-ui/react-prism/blob/master/LICENSE">MIT LICENSE</Link>.
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

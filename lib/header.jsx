@@ -12,9 +12,9 @@ const Header = () => {
           justify-content: center;
           align-items: center;
         }
-        
+
         h1 {
-          font-size: .8rem;
+          font-size: 0.8rem;
           letter-spacing: 1px;
           text-transform: uppercase;
         }

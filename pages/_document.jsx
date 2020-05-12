@@ -3,10 +3,10 @@ import { CSSBaseline } from '@zeit-ui/react'
 import flush from 'styled-jsx/server'
 
 class MyDocument extends Document {
-  static async getInitialProps (ctx) {
+  static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
     const styles = CSSBaseline.flush()
-  
+
     return {
       ...initialProps,
       styles: (
@@ -15,10 +15,10 @@ class MyDocument extends Document {
           {styles}
           {flush()}
         </>
-      )
+      ),
     }
   }
-  
+
   render() {
     return (
       <Html lang="en-us">
@@ -35,7 +35,7 @@ class MyDocument extends Document {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'UA-110371817-19');
-              `
+              `,
             }}
           />
         </body>
