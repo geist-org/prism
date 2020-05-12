@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "next dev",
     "now-build": "next build",
-    "build": "rollup -c && tsc -p ./scripts",
+    "build": "rm -rf ./dist && rollup -c && tsc -p ./scripts",
     "release": "yarn build && yarn publish --access public --non-interactive"
   },
   "files": [
