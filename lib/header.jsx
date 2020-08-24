@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
   return (
     <header>
-      <h1>@zeit-ui/react-prism</h1>
+      <h1>@geist-ui/react-prism</h1>
       <style jsx>{`
         header {
           height: 450px;

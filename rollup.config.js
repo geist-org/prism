@@ -21,7 +21,7 @@ const plugins = [
   commonjs(),
 ]
 
-const external = id => /^react|react-dom|styled-jsx|@zeit-ui\/react/.test(id)
+const external = id => /^react|react-dom|styled-jsx|@geist-ui\/react/.test(id)
 
 const globals = {
   react: 'React',

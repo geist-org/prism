@@ -1,5 +1,5 @@
 import Layout from 'lib/layout'
-import { Link, Tabs, Snippet, Spacer } from '@zeit-ui/react'
+import { Link, Tabs, Snippet, Spacer } from '@geist-ui/react'
 
 export const meta = {
   title: 'home',
@@ -7,8 +7,8 @@ export const meta = {
 
 ### About
 
-This is the code styles for `prism.js`, design style from <Link target="_blank" href="https://vercel.com/design">vercel.design</Link>.
-Report an issue on <Link target="_blank" color href="https://github.com/zeit-ui/react-prism">Github</Link>.
+This is the code styles for `prism.js`, design style from Geist UI.
+Report an issue on <Link target="_blank" color href="https://github.com/geist-org/react-prism">Github</Link>.
 
 <Spacer y={2} />
 
@@ -18,28 +18,28 @@ Report an issue on <Link target="_blank" color href="https://github.com/zeit-ui/
 
 <Tabs initialValue="Yarn" style={{ width: '450px' }}>
   <Tabs.Item label="Yarn">
-    <Snippet text="yarn add @zeit-ui/react @zeit-ui/react-prism" />
+    <Snippet text="yarn add @geist-ui/react @geist-ui/react-prism" />
   </Tabs.Item>
   <Tabs.Item label="NPM">
-    <Snippet text="npm install @zeit-ui/react @zeit-ui/react-prism" />
+    <Snippet text="npm install @geist-ui/react @geist-ui/react-prism" />
   </Tabs.Item>
 </Tabs>
 
-This toolkit depends on `@zeit-ui/react`, learn more
-at <Link target="_blank" color href="https://react.zeit-ui.co">document site</Link>.
+This toolkit depends on `@geist-ui/react`, learn more
+at <Link target="_blank" color href="https://react.geist-ui.dev">document site</Link>.
 
 **2. Import to app.jsx:**
 
 ```jsx
-import { ZEITUIProvider, CSSBaseline } from '@zeit-ui/react'
-import { PrismBaseline } from '@zeit-ui/react-prism'
+import { GeistProvider, CSSBaseline } from '@geist-ui/react'
+import { PrismBaseline } from '@geist-ui/react-prism'
 
 const app = () => (
-  <ZEITUIProvider>
+  <GeistProvider>
     <CSSBaseline />
     <PrismBaseline />
     <YourAppComponent />
-  </ZEITUIProvider>
+  </GeistProvider>
 )
 ```
 
@@ -52,7 +52,7 @@ Here is the display effect of different code blocks:
 **`.jsx`**
 
 ```jsx
-import { Button } from '@zeit-ui/react'
+import { Button } from '@geist-ui/react'
 
 const MyExampleComponent = () => {
   return <Button auto>Actions</Button>
@@ -121,6 +121,6 @@ export default after
 
 ### License
 
-Licensed under the <Link target="_blank" href="https://github.com/zeit-ui/react-prism/blob/master/LICENSE">MIT LICENSE</Link>.
+Licensed under the <Link target="_blank" href="https://github.com/geist-org/react-prism/blob/master/LICENSE">MIT LICENSE</Link>.
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

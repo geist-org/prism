@@ -1,3 +1,3 @@
 # Prism style
 
-[document site](https://prism.zeit-ui.co)
+[document site](https://prism.geist-ui.dev)

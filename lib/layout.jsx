@@ -1,5 +1,5 @@
 import React from 'react'
-import { Page } from '@zeit-ui/react'
+import { Page } from '@geist-ui/react'
 import Header from './header'
 
 const Layout = ({ children }) => {
