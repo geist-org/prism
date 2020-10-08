@@ -30,7 +30,7 @@
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
     "@types/styled-jsx": "^2.2.8",
-    "next": "^9.3.6",
+    "next": "^9.5.4",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
