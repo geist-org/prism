@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { CssBaseline } from '@geist-ui/react'
+import { CssBaseline } from '@geist-ui/core'
 import flush from 'styled-jsx/server'
 
 class MyDocument extends Document {

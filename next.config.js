@@ -1,3 +1,7 @@
+const withTM = require('next-transpile-modules')(['@geist-ui/core'])
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 const withMDX = require('@next/mdx')({
   extension: /\.(md|mdx)?$/,
   options: {
@@ -6,29 +10,11 @@ const withMDX = require('@next/mdx')({
 })
 
 const nextConfig = {
-  target: 'serverless',
-
   pageExtensions: ['jsx', 'js', 'mdx', 'md', 'ts', 'tsx'],
-
-  cssModules: true,
-
-  cssLoaderOptions: {
-    importLoaders: 1,
-    localIdentName: '[local]___[hash:base64:5]',
-  },
 
   env: {
     VERSION: require('./package.json').version,
   },
-
-  webpack(config) {
-    config.resolve.modules.push(__dirname)
-    return config
-  },
-
-  experimental: {
-    reactRefresh: true,
-  },
 }
 
-module.exports = withMDX(nextConfig)
+module.exports = withTM(withBundleAnalyzer(withMDX(nextConfig)))

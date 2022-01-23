@@ -2,7 +2,6 @@ import commonjs from '@rollup/plugin-commonjs'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import localResolve from 'rollup-plugin-local-resolve'
 import babel from 'rollup-plugin-babel'
-import pkg from './package.json'
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx']
 
@@ -21,35 +20,28 @@ const plugins = [
   commonjs(),
 ]
 
-const external = id => /^react|react-dom|styled-jsx|@geist-ui\/react/.test(id)
+const external = id => /^react|react-dom|@geist-ui\/core/.test(id)
 
 const globals = {
   react: 'React',
   'react-dom': 'ReactDOM',
-  'styled-jsx': '_JSXStyle',
 }
 
 export default {
   input: 'packages/index.ts',
   output: [
     {
-      file: pkg.main,
+      entryFileNames: '[name].js',
       format: 'cjs',
       exports: 'named',
+      dir: 'dist',
       globals,
-    },
-    {
-      file: pkg.module,
-      format: 'es',
-      exports: 'named',
-      globals,
-    },
-    {
-      file: pkg.browser,
-      format: 'umd',
-      exports: 'named',
-      name: 'Contextable',
-      globals,
+      manualChunks: id => {
+        if (id.includes('node_modules/styled-jsx')) {
+          return 'styled-jsx.cjs'
+        }
+      },
+      chunkFileNames: '[name].js',
     },
   ],
   external,

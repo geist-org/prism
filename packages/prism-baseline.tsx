@@ -1,7 +1,8 @@
-import React from 'react'
-import { useTheme } from '@geist-ui/react'
+import React, { ReactElement } from 'react'
+import { useTheme } from '@geist-ui/core'
 import flush from 'styled-jsx/server'
-import flushToReact from 'styled-jsx/server'
+
+type FlushToReact = <T>(opts?: { nonce?: string }) => Array<ReactElement<T>>
 
 const PrismBaseline: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   const theme = useTheme()
@@ -71,7 +72,7 @@ const PrismBaseline: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
 }
 
 type MemoPrismBaselineComponent<P = {}> = React.NamedExoticComponent<P> & {
-  flush: typeof flushToReact
+  flush: FlushToReact
 }
 
 const MemoPrismBaseline = React.memo(PrismBaseline) as MemoPrismBaselineComponent<

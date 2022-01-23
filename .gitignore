@@ -14,10 +14,13 @@
 
 # production
 /build
+/dist
+/esm
 
 # misc
 .DS_Store
 .env*
+.idea
 
 # debug
 npm-debug.log*

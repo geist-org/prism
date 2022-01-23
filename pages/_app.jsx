@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
-import { GeistProvider, CssBaseline } from '@geist-ui/react'
+import { GeistProvider, CssBaseline } from '@geist-ui/core'
 import { PrismBaseline } from '../packages/index'
 
 const Application = ({ Component, pageProps }) => {
