@@ -11,6 +11,7 @@ const plugins = [
     extensions,
     presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
     plugins: ['styled-jsx/babel'],
+    babelrc: false,
   }),
   localResolve(),
   nodeResolve({
@@ -31,7 +32,7 @@ export default {
   input: 'packages/index.ts',
   output: [
     {
-      entryFileNames: '[name].js',
+      entryFileNames: 'index.js',
       format: 'cjs',
       exports: 'named',
       dir: 'dist',
