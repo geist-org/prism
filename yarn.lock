@@ -1113,10 +1113,10 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
-"@geist-ui/core@^2.2.5":
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/@geist-ui/core/-/core-2.2.5.tgz#56b909e112d74be2b168904a317687c8582126ea"
-  integrity sha512-T3a/dCCJzOjjcAA4nzbqX92yMPV1NpepHD+j9rVfCJWcj2b6fFwweLI104SFQzNyfBjxZXxDQcZ5ENYdMKTFyw==
+"@geist-ui/core@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@geist-ui/core/-/core-2.3.0.tgz#4fb0ebff60895e2aa4d44b325898a3783f0724d3"
+  integrity sha512-9NxGSSVieCtlhqWwBx6uffLgwG0JVGVyDcCgTo6P4rKCKZcVpvvodiPjpKveSTOlJa1+mmAvBnZlwug+0F59fg==
   dependencies:
     "@babel/runtime" "^7.16.7"
 

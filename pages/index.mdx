@@ -5,20 +5,16 @@ export const meta = {
   title: 'home',
 }
 
-## About
-
 This is the code styles for `prism.js`, design style from Geist UI.
 Report an issue on <Link target="_blank" color href="https://github.com/geist-org/prism">GitHub</Link>.
 
 <Spacer y={2} />
 
-## Usage
+### Usage
 
 Prism require on the latest version of the Geist UI, make sure you always have `@geist-ui/core` installed. When you [change the themes](https://geist-ui.dev/en-us/guide/themes) of the Geist, prism will automatically follow.
 
-### Install
-
-<Tabs initialValue="yarn" style={{ width: '450px' }}>
+<Tabs initialValue="yarn" hideDivider hideBorder leftSpace="4px">
   <Tabs.Tab label="Yarn" value="yarn">
     <Snippet text="yarn add @geist-ui/core @geist-ui/prism" />
   </Tabs.Tab>
@@ -29,7 +25,7 @@ Prism require on the latest version of the Geist UI, make sure you always have `
 
 <Spacer h={2} />
 
-### Import to `app.jsx`
+### Import
 
 ```jsx
 import { GeistProvider, CSSBaseline } from '@geist-ui/core'
@@ -46,7 +42,7 @@ const app = () => (
 
 <Spacer y={2} />
 
-## Preview
+### Previews
 
 Here is the display effect of different code blocks:
 
@@ -120,7 +116,7 @@ export default after
 
 <Spacer y={3} />
 
-## License
+### License
 
 Licensed under the <Link target="_blank" href="https://github.com/geist-org/react-prism/blob/master/LICENSE">MIT LICENSE</Link>.
 
