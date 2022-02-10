@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "now-build": "next build",
+    "docs:build": "next build",
     "build:rollup": "rm -rf ./dist && rollup -c && tsc -p ./scripts",
     "build:babel": "babel --no-babelrc --config-file ./scripts/babel.config.js --extensions \".js,.ts,.tsx\" ./packages --out-dir ./esm --ignore \"**/__tests__/**/*,**/*.d.ts\"",
     "build:after": "node scripts/replace.js",
